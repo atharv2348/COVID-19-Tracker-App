@@ -1,7 +1,6 @@
 import 'package:covid_19_tracker_app/Services/states_services.dart';
 import 'package:covid_19_tracker_app/View/detail_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:shimmer/shimmer.dart';
 
 class CountriesStates extends StatefulWidget {
@@ -30,17 +29,24 @@ class _CountriedStatesState extends State<CountriesStates>
   Widget build(BuildContext context) {
     WorldStatesServcies statesServcies = WorldStatesServcies();
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Countries"),
+        backgroundColor: Colors.transparent,
+      ),
       body: SafeArea(
         child: Column(
           children: [
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: TextField(
                 controller: _searchController,
                 onChanged: (value) =>
                     setState(() {}), // 'll update the UI while typing
                 decoration: InputDecoration(
                     hintText: "Search with country name",
+                    contentPadding: EdgeInsets.all(20),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(50))),
               ),
@@ -76,8 +82,8 @@ class _CountriedStatesState extends State<CountriesStates>
                                                 ["active"],
                                             critical: snapshot.data![index]
                                                 ["critical"],
-                                            todayRecovered: snapshot.data![index]
-                                                ["todayRecovered"],
+                                            todayRecovered: snapshot
+                                                .data![index]["todayRecovered"],
                                             tests: snapshot.data![index]["tests"]))),
                                 child: ListTile(
                                     title:
@@ -113,8 +119,8 @@ class _CountriedStatesState extends State<CountriesStates>
                                                 ["active"],
                                             critical: snapshot.data![index]
                                                 ["critical"],
-                                            todayRecovered: snapshot.data![index]
-                                                ["todayRecovered"],
+                                            todayRecovered: snapshot
+                                                .data![index]["todayRecovered"],
                                             tests: snapshot.data![index]["tests"]))),
                                 child: ListTile(
                                     title:
