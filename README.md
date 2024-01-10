@@ -11,7 +11,7 @@ Stay informed about the latest COVID-19 statistics with this visually appealing 
 
 ## Screenshots
 
-[Insert screenshots showcasing the app's UI and features here]
+https://github.com/atharv2348/COVID-19-Tracker-App/assets/114682434/1b5047fa-ebe6-4c1b-a623-c24df839f687
 
 ## Getting Started
 
