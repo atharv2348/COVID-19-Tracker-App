@@ -20,7 +20,7 @@ https://github.com/atharv2348/COVID-19-Tracker-App/assets/114682434/1b5047fa-ebe
    ```bash
    git clone [https://github.com/](https://github.com/)<atharv2348>/COVID-19-Tracker-App.git
 
-2. Install dependencies::
+2. Install dependencies:
 
    ```bash
    flutter pub get
